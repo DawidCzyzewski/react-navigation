@@ -30,8 +30,10 @@ export const UserContext = createContext(defaultValue);
 // instead of children, I can write UserContext and Provider after dot. UserContext.Provider and now I can write for example value
 export const UserProvider = ({ children }) => {
   // Here are two states and two functions below exported to App:
-  const [username, setUsername] = useState("");
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("Dawid");
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+
   const [someArgument, setSomeArgument] = useState("Co się stało z abecadłem?");
 
   const logIn = () => {

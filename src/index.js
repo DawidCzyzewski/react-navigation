@@ -1,23 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-// import App from "./App";
-// import App2 from "./App2";
-import App3 from "./App3";
+import App from "./App";
 
 import { UserContext, UserProvider } from "./providers/userContext";
 // import { useContext } from "react";
 
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      {/* <App /> */}
-      {/* <App2 /> */}
-      <App3 />{" "}
-    </UserProvider>
+    <BrowserRouter>
+      <UserProvider>
+        <App />
+      </UserProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
